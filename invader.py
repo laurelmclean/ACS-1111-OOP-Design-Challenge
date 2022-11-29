@@ -2,7 +2,7 @@ import pygame
 from game_object import GameObject
 
 # This class extends GameObject
-class Alien(GameObject):
+class Invader(GameObject):
     # method 1
     def __init__(self, x, y, image, point_value, is_destroyed = False):
         super().__init__(x, y, image)
@@ -28,3 +28,15 @@ class Alien(GameObject):
 # Top invaders–30 points
 # UFO–50, 100, 150, or 300 points
 # Extra laser base–1000 points
+
+rows = 3
+columns = 10
+
+# Instantiate 3 rows of invaders with the top row worth 30 pts, the middle row worth 20 pts, and the bottom row worth 10 pts
+points = 10
+def create_invaders():
+    for row in range(rows):
+        for position in range(columns):
+            invader = Invader(100 + position * 100, 100 + row * 50, image, points * (3 - row))
+
+create_invaders()
