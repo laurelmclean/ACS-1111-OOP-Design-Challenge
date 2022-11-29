@@ -19,7 +19,8 @@ class Player(GameObject):
         # Updates the player's health based on scoring and receiving laser blasts
         pass
 
-
+# instantiate a player at bottom of screen with three lives
+player = Player(250, 500, 'player.png', 3)
 
 
     
