@@ -17,3 +17,5 @@ class Laser_blast(GameObject):
     def inflict_damage(self):
         # Update the player's health by subtracting damage points
         pass
+
+    
